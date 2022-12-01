@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "/pb";
+
+service Audiolibrary {
+  rpc GetAudiofilePath(AudiolibraryRequest) returns (AudiolibraryResponse) {}
+}
+
+message AudiolibraryRequest {
+  string book_title = 1;
+}
+
+message AudiolibraryResponse {
+  string file_path = 1;
+}
+
